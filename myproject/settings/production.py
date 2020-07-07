@@ -1,7 +1,7 @@
 from .base import *
 
 DEBUG = False
-ALLOWED_HOSTS = ['ip-address', 'https://rinkeshmakwana.herokuapp.com/']
+ALLOWED_HOSTS = ['ip-address', 'rinkeshmakwana.herokuapp.com']
 
 AUTH_PASSWORD_VALIDATORS = [
     {
