@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- ======= Mobile nav toggle button ======= -->
+<button type="button" class="mobile-nav-toggle d-xl-none"><i class="icofont-navigation-menu"></i></button>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex flex-column justify-content-center">
+
+    <nav class="nav-menu">
+      <ul>
+        <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
+        <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+        <li><a href="#resume"><i class="bx bx-file-blank"></i> <span>Resume</span></a></li>
+        <li><a href="#portfolio"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+        <li><a href="#services"><i class="bx bx-server"></i> <span>Services</span></a></li>
+        <li><a href="#contact"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+      </ul>
+    </nav><!-- .nav-menu -->
+
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center">
+    <div class="container" data-aos="zoom-in" data-aos-delay="100">
+      <h1>{{ user.user.get_full_name }}</h1>
+      <p>I'm <span class="typed" data-typed-items="Software Engineer, Python Developer, Freelancer"></span></p>
+      <div class="social-links">
+        {% for social in socials %}
+        <a href="{{social.site_url}}" class="{{social.site_name}}" target="_blank"><i class="bx bxl-{{social.site_name}}"></i></a>
+        {% endfor %}
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    {% include 'about.html' %}
+
+    {% include 'skills.html' %}
+
+    {% include 'resume.html' %}     
+
+    {% include 'contact.html' %}
+
+  </main><!-- End #main -->
+
+  {% include 'footer.html' %}
+
+{% endblock content %}

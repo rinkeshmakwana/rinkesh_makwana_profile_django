@@ -1,0 +1,46 @@
+{% load static %}
+<!-- ======= About Section ======= -->
+<section id="about" class="about">
+    <div class="container" data-aos="fade-up">
+
+      <div class="section-title">
+        <h2>About</h2>
+        <p>Focused and detail-oriented programmer offering exceptional troubleshooting skills and a talent for developing innovative solutions to unusual and difficult problems. Reliable and efficient guarantees that all jobs will be completed well in a timely manner.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-4">
+          <img src="{% static 'img/profile-img.jpg' %}" class="img-fluid" alt="">
+        </div>
+        <div class="col-lg-8 pt-4 pt-lg-0 content">
+          <h3>Python &amp; Web Developer.</h3>
+          <p class="font-italic">
+            Rich experience in all phases of the software development life-cycle, utilizing multiple development methodologies, including Design Patterns, Extreme Programming and Structured Programming.
+          </p>
+          <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="icofont-rounded-right"></i> <strong>Birthday:</strong> {{ user.birthday }}</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Website:</strong> www.rinkeshmakwana.com</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Phone:</strong> {{ user.phone }}</li>
+                <li><i class="icofont-rounded-right"></i> <strong>City:</strong> {{ user.address }}</li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="icofont-rounded-right"></i> <strong>Age:</strong> {{user.age}}</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Degree:</strong> Bachelor</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Email:</strong> {{ user.user.email }}</li>
+                <li><i class="icofont-rounded-right"></i> <strong>Freelance:</strong> Available</li>
+              </ul>
+            </div>
+          </div>
+          <p>
+            Expertise in manipulating and analyzing complex, high-volume, high-dimensionality data from varying data sources and
+big data sources.
+          </p>
+        </div>
+      </div>
+
+    </div>
+</section><!-- End About Section -->
