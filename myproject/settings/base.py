@@ -1,4 +1,5 @@
 import os
+import django_heroku
 from decouple import config
 
 BASE_DIR = os.path.dirname(
@@ -78,3 +79,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Crispy Form Settings
 CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+django_heroku.settings(locals())
